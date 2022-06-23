@@ -1,8 +1,5 @@
 
-from cgitb import text
-from operator import indexOf
 from flask import Flask, request
-from numpy import std
 from twilio.twiml.messaging_response import MessagingResponse
 import xlwings as xw
 
