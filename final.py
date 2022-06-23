@@ -11,11 +11,11 @@ app = Flask(__name__)
 def reply():
     text = request.form.get('Body')
 
-    wb = xw.Book('Books.xlsx')
-    ws = wb.sheets[f'Bot']
+   
     res = MessagingResponse()
-
-    data = ws.range('A2:F331').value
+    data=[]
+    with open('data', 'rb') as fb:
+        data = pickle.load(fb)
     message = ""
 
     print(f"{data[0]}")
